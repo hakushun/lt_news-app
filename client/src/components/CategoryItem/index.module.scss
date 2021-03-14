@@ -1,0 +1,21 @@
+@use '../stylesheets/mixin' as mixin;
+
+.root {
+  > button {
+    padding: 5px 10px;
+    color: mixin.$bgColor;
+    background-color: mixin.$primaryColor;
+    border: 3px solid mixin.$primaryColor;
+    border-radius: 5px;
+
+    &:hover {
+      color: mixin.$primaryColor;
+      background-color: mixin.$bgColor;
+    }
+
+    &:focus {
+      color: mixin.$primaryColor;
+      background-color: mixin.$bgColor;
+    }
+  }
+}

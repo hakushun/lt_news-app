@@ -1,0 +1,38 @@
+@use '../stylesheets/mixin' as mixin;
+
+.header {
+  background-color: mixin.$headerBgColor;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: mixin.rem(28);
+  font-weight: bold;
+
+  @include mixin.mq() {
+    font-size: mixin.rem(22);
+  }
+}
+
+.titleLink {
+  display: block;
+  padding: 5px 10px;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: darken(mixin.$headerBgColor, 10%);
+  }
+
+  &:active {
+    background-color: mixin.$headerBgColor;
+    box-shadow: inset 0 0 5px 5px darken(mixin.$headerBgColor, 10%);
+  }
+}

@@ -1,0 +1,47 @@
+@use '../stylesheets/mixin' as mixin;
+
+.root {
+  width: 250px;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 0 2px 2px 2px #c6c6cc;
+}
+
+.link {
+  display: block;
+  height: 100%;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+
+  &:focus {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+.media {
+  max-width: 100%;
+
+  > img {
+    width: 100%;
+  }
+}
+
+.content {
+  padding: 10px;
+}
+
+.title {
+  font-size: mixin.rem(18);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  font-size: mixin.rem(14);
+}
